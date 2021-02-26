@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Navbar */
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 50px;
+    color: rgb(5, 5, 5);
+    background-color: rgb(0, 255, 76);
+    position: fixed;
+    
+}
+.navigation a{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    font-family: 'Poppins', sans-serif;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 20px;
+}
+.navigation li {
+    width: 80px;
+    height: 35px;
+    padding-top: 15px;
+}
+
+#linkhome, #linkabout, #linkproduct, #linkteam, #linkblog, #linkcontact{
+    background-color: transparent;
+}
+#linkhome:hover, #linkabout:hover, #linkproduct:hover, #linkteam:hover, #linkblog:hover, #linkcontact:hover{
+    background-color: rgb(99, 0, 0)!important;
+}
+
+/* End of Navigation */
+
+/* Home Section */
+.homesec{
+    width: 100vw;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(alesia-kazantceva-VWcPlbHglYc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.homecontent{
+    display: flex;
+    flex-direction: column;
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+.homecontent h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+.homecontent p{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 20px;
+}
+@keyframes popup {
+    0%{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* About Section */
+.aboutsec{
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(0, 255, 76);
+    display: flex;
+    flex-direction: column;
+}
+.titlestyle{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.aboutcontent{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 120px;
+}
+
+.description{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 5px solid rgb(151, 86, 0);
+}
+.description h2{
+    font-family: 'Yusei Magic', sans-serif;
+}
+.description h2, .description p{
+    margin-left: 20px;
+}
+.description p{
+    text-align: justify;
+    margin-top: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+.myphoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.myphoto img{
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+}
+
+/* Portfolio Section */
+.portfoliosec{
+    width: 100vw;
+    height: 500px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+}
+.portfoliocontent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.portfolioimg{
+    width: 322px;
+    height: 162px;
+    margin: 10px 10px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px #000000;
+}
+
+/* Team Section */
+.teamsec{
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(0, 255, 76);
+    display: flex;
+    flex-direction: column;
+}
+.teamcontent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    margin-top: 30px;
+    margin: auto;
+}
+.teamphoto img{
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+}
+.teamphoto h3{
+    font-family: 'Yusei Magic', sans-serif;
+}
+.teamphoto img:hover{
+    transition: .5s all;
+    border-radius: 110px;
+    cursor: pointer;
+}
+.teamphoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.teamphoto h3{
+    margin-top: 10px;
+}
+.teamphoto span{
+    margin-top: 3px;
+}
+
+
+/* Blog Section */
+.blogsec{
+    width: 100vw;
+    height: 600px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+}
+.blogcontent{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    margin: auto;
+}
+.blogcard{
+    width: 300px;
+    height: 215px;
+    background-color: rgb(255, 106, 60);
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 0 10px #000000;
+}
+.blogcard:hover{
+    background-color: rgb(190, 70, 0);
+    cursor: pointer;
+    transition: .2s all;
+    border-radius: 10px;
+}
+.linkweb:hover{
+    opacity: .7;
+    transition: .2s all;
+}
+.blogcard span{
+    margin-top: 6px;
+}
+.blogphoto{
+    width: 300px;
+    height: 150px;
+}
+.bloglink{
+    text-decoration: none;
+    color: white;
+}
+
+/* Contact Section */
+.contactsec{
+    width: 100vw;
+    height: 500px;
+    background-color:  rgb(0, 255, 76);
+    display: flex;
+    flex-direction: column;
+}
+.contactcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.formclass{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.inputclass{
+    margin-bottom: 5px;
+    outline: none;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.textinput{
+    margin-bottom: 8px;
+    outline: none;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submitinput{
+    padding: 5px;
+    background-color: orange;
+    border: 1px solid  black;
+    outline: none;
+}
+.submitinput:hover{
+    cursor: pointer;
+    background-color: orangered;
+    color: white;
+    transition: .2s all;
+
+}
+.contactlogo{
+    color: white;
+    margin-right: 5px;
+}
+.contactlogo:hover{
+    color: rgb(211, 211, 211);
+}
+.label{
+    margin-bottom: 3px;
+}
+/* PopUp Page */
+#photopop{
+    display: none;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+#popupcontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#popupimg{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
